@@ -10,8 +10,8 @@ const AddUser = (props) => {
   const [enteredAge, setEnteredAge] = useState('');
   const [error, setError] = useState();
 
-  const addUserHandler = (event) => {
-    event.preventDefault();
+  const addUserHandler = (e) => {
+    e.preventDefault();
     if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
       setError({
         title: 'Invalid input',
@@ -31,12 +31,12 @@ const AddUser = (props) => {
     setEnteredAge('');
   };
 
-  const usernameChangeHandler = (event) => {
-    setEnteredUsername(event.target.value);
+  const usernameChangeHandler = (e) => {
+    setEnteredUsername(e.target.value);
   };
 
-  const ageChangeHandler = (event) => {
-    setEnteredAge(event.target.value);
+  const ageChangeHandler = (e) => {
+    setEnteredAge(e.target.value);
   };
 
   const errorHandler = () => {
